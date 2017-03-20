@@ -9,8 +9,13 @@
 }
 
 body {
-  margin: 0px;
+  background-color: #404040;
+}
+
+#outer-frame {
+  margin: 0 auto;
   padding: 30px;
+  width: 860px;
   background-color: #CCCB9E;
   border-width: 20px;
   color: white;
