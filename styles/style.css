@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'Glitch0';
+    src:url('../fonts/Glitch0.ttf.woff') format('woff'),
+        url('../fonts/Glitch0.ttf.svg#Glitch0') format('svg'),
+        url('../fonts/Glitch0.ttf.eot'),
+        url('../fonts/Glitch0.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  margin: 0px;
+  padding: 30px;
+  background-color: #CCCB9E;
+  border-width: 20px;
+  color: white;
+  font-family: 'Glitch0', courier;
+}
+
+#inner-frame {
+  border-color: #BEBD84;
+  border-width: 30px;
+  border-style: inset;
+  background-color: black;
+  width: 800px;
+  height: 600px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav a:hover, h3 a:hover {
+  background-color: white;
+  color: black;
+}
+
+header {
+  position: absolute;
+  width: 800px;
+  background-color: black;
+}
+
+header p {
+  background-color: #3F6BEC;
+  padding: 2px 10px;
+  font-size: 1.25em;
+  margin: 5px 10px;
+}
+
+main {
+  height: 505px;
+  overflow: scroll;
+  margin: 35px 10px 0px;
+  background-color: black;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  padding: 5px;
+}
+
+main ul {
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+nav {
+  position: absolute;
+  width: inherit;
+}
+
+nav ul {
+  margin: 10px;
+}
+
+nav li {
+  list-style-type: none;
+  display: inline-block;
+  font-size: 1.25em;
+  padding-right: 20px;
+}
+
+nav li::first-letter {
+  background-color: #3F6BEC;
+}
+
+nav img {
+  width: 25px;
+  margin-bottom: -5px;
+  background-color: black;
+}
+
+footer {
+  margin-top: 10px;
+}
+
+footer img {
+  width: 15px;
+  float: left;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+footer a {
+  margin-top: 10px;
+  font-family: helvetica;
+  font-weight: bold;
+  text-shadow: 2px 2px #8D8C5E;
+}
