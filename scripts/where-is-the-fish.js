@@ -1,43 +1,33 @@
 $(document).ready(function() {
-  table = "<table>";
-  // boardWidth must be odd for board to be checkered
-  boardWidth = 7;
-  boardHeight = 7;
-  cellTotal = 1;
-  secretCell = Math.floor(Math.random() * boardWidth * boardHeight);
+  $('main').append("<table id='board'></table>");
 
-  // generate table
+  // boardWidth must be odd for board to be checkered
+  var boardWidth = 7;
+  var boardHeight = 7;
+  var cellTotal = 1;
+  var secretCell = Math.floor(Math.random() * boardWidth * boardHeight);
+
+  // populate table
   for (var i = 0; i < boardHeight; i++) {
-    row = "<tr>";
+    var row = $("<tr></tr>");
 
     for (var j = 0; j < boardWidth; j++) {
       var cellClass = cellTotal % 2 === 0 ? "even" : "odd";
-      if (cellTotal === secretCell) {
-        row += "<td class=\"" + cellClass + "\" id=\"secret-salmon-cell\"></td>";
-      } else {
-        row += "<td class=\"" + cellClass + "\"></td>";
-      }
+      var cell = $("<td></td>").addClass(cellClass);
+      if (cellTotal === secretCell) { cell.attr('id', 'secret-salmon-cell'); }
 
+      row.append(cell);
       cellTotal ++;
     }
-    table += row + "</tr>";
+    $('#board').append(row);
   }
-  table += "</table>";
-
-  // insert table after game title
-  $('h2').after(table);
 
   // keep track of user guesses
   var guesses = 0;
 
   // change cell colors as the user clicks
-  $('.odd').click(function() {
-    $(this).css("background-color", "lightgray");
-    guesses ++;
-  });
-
-  $('.even').click(function() {
-    $(this).css("background-color", "gray");
+  $('td').click(function() {
+    $(this).addClass('clicked');
     guesses ++;
   });
 

@@ -16,6 +16,18 @@ td {
   height: 50px;
 }
 
+.even {
+  background-color: black;
+}
+
+.even.clicked {
+  background-color: gray;
+}
+
 .odd {
   background-color: white;
+}
+
+.odd.clicked {
+  background-color: lightgray;
 }
