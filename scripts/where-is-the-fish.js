@@ -24,6 +24,7 @@ $(document).ready(function() {
 
   // keep track of user guesses
   var guesses = 0;
+  var game_over = false;
 
   // change cell colors as the user clicks
   $('td').click(function() {
@@ -33,10 +34,14 @@ $(document).ready(function() {
 
   // reveal the secret salmon when its location is clicked
   $("td#secret-salmon-cell").click(function() {
-    $("td#secret-salmon-cell").html("<img src=\"assets/salmon.png\" alt\"salmon icon\"/>");
+    if (!game_over) {
+      $("td#secret-salmon-cell").html("<img src=\"assets/salmon.png\" alt\"salmon icon\"/>");
 
-    // tell the user they won and how many tries it took
-    $('table').after("<h3>You found the fish! Took ya " + guesses + " tries...</h3>");
+      // tell the user they won and how many tries it took
+      $('table').after("<h3>You found the fish! Took ya " + guesses + " tries...</h3>");
+
+      game_over = true;  
+    }
   });
 
 });
