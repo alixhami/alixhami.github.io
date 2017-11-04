@@ -1,7 +1,6 @@
 var keysToPages = {
   h: 'index',
   a: 'about',
-  r: 'resume',
   w: 'where-is-the-fish'
 };
 
